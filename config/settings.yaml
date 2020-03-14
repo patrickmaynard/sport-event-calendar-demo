@@ -1,0 +1,5 @@
+database:
+  host: '127.0.0.1'
+  name: 'db-name'
+  user: 'db-user'
+  password: 'db-password'
