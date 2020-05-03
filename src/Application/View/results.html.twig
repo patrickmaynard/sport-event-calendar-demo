@@ -1,0 +1,26 @@
+{% include 'header.html.twig' %}
+
+{% block body %}
+
+    <h2>{{ templateSettings.title }}</h2>
+    <table>
+        <tr>
+            <th>Date and time</th>
+            <th>Sport</th>
+            <th>Home</th>
+            <th>Guest</th>
+            <th>Notes</th>
+        </tr>
+    {% for event in templateSettings.events %}
+        <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
+                <td><span class="mobile-title">Date and time: </span>{{ event.dateTime|date("D, d.m.Y, G:i") }}</td>
+            <td><span class="mobile-title">Sport: </span><a href="/?sport={{ event.sportId }}">{{ event.sport }}</a></td>
+                <td><span class="mobile-title">Home: </span>{{ event.home }}</strong></td>
+                <td><span class="mobile-title">Guest: </span>{{ event.guest }}</td>
+                <td><span class="mobile-title">Notes: </span>{{ event.notes }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
+
+{% include 'footer.html.twig' %}

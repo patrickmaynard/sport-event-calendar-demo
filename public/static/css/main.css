@@ -1,0 +1,118 @@
+/* Optional: If I were to style much more, I would use scss variables for things like colors and margins. */
+
+html {
+    text-align: center;
+    background: #cccccc;
+}
+body {
+    margin:auto;
+    width:80%;
+    max-width:900px;
+    text-align: left;
+    background: #000000;
+    height:100vh;
+}
+header {
+    background:#000000;
+    min-height:80px;
+    padding:0px 20px 10px 29px;
+}
+header ul {
+    margin:0px;
+    padding:0px;
+}
+header li {
+    background: #ffffff;
+    display:inline;
+    padding:10px;
+    margin:0px;
+    border:1px solid #cccccc;
+}
+header li a {
+    color:#000000;
+}
+header h1, header h1 a {
+    color:#ffffff;
+    text-decoration: none;
+}
+header li.menu-toggle {
+    display:none;
+}
+main {
+    background: #000000;
+}
+article {
+    padding: 20px;
+    background: #ffffff;
+}
+footer {
+    padding: 20px;
+    color: #ffffff;
+}
+table {
+    width:100%;
+}
+tr.odd {
+    background: #cccccc;
+}
+td {
+    padding:5px 5px 0px 5px;
+}
+td a {
+    color: #000000;
+}
+span.mobile-title {
+    display:none;
+}
+@media(max-width: 625px) {
+    header {
+        padding:0px;
+        overflow: hidden;
+    }
+    header li.menu-toggle {
+        display:block;
+        text-decoration: underline;
+    }
+    header ul {
+        height:40px;
+        overflow:hidden;
+    }
+    header ul:hover {
+        height:auto;
+    }
+    header li {
+        display:block;
+        width:100%;
+    }
+    header h1 {
+        margin:10px;
+    }
+    article {
+        padding: 10px;
+    }
+    footer {
+        padding: 10px;
+    }
+    table {
+        width: 100%;
+    }
+    th {
+        display:none;
+    }
+    td {
+        display:block;
+        width:100%;
+        background:#ffffff;
+    }
+    tr {
+        display:block;
+        border-bottom: 1px solid #cccccc;
+    }
+    tr:first-child, tr:last-child {
+        border-bottom: none;
+    }
+    span.mobile-title {
+        display: inline;
+        font-weight: bold;
+    }
+}

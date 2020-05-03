@@ -11,7 +11,9 @@ require(
 );
 
 use Application\Basics\Stub;
+use Application\Controller\EventListingController;
 
-echo '<pre>';
-
-$stub = new Stub;
+//If we get more controllers, we can set up some actual routing.
+//For now, we can just use the controller we have.
+$defaultController = new EventListingController();
+echo $defaultController->eventsAction();
