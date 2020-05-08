@@ -61,10 +61,10 @@ class EventRepository
             . 'a.id as id, '
             . 'a.date_and_time as dateTime, '
             . 'a.notes, '
-            . 'b.name as sport, '
+            . 'b.name as sportName, '
             . 'b.id as sportId, '
-            . 'c.name AS home, '
-            . 'd.name AS guest '
+            . 'c.name AS homeName, '
+            . 'd.name AS guestName '
             . 'FROM calendar.events a '
             . 'INNER JOIN sports b ON '
             . 'a._sport_id = b.id '
@@ -73,6 +73,7 @@ class EventRepository
             . 'INNER JOIN teams d ON '
             . 'a._guest_id = d.id '
             . $whereClause
+            . ' ORDER BY dateTime ASC '
         );
     }
 

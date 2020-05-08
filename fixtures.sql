@@ -45,7 +45,7 @@ CREATE TABLE `events` (
 
 LOCK TABLES `events` WRITE;
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
-INSERT INTO `events` VALUES (1,'2020-01-01 08:00:00',1,1,2,'Foo bar baz.'),(2,'2020-02-01 09:00:00',2,2,3,'Baz qux quux.'),(3,'2020-02-01 09:00:00',3,3,4,'Baz qux quux.');
+INSERT INTO `events` VALUES (1,'2020-01-01 08:00:00',1,1,2,'Foo bar baz.'),(2,'2020-02-01 09:00:00',2,2,3,'Baz qux quux.'),(3,'2020-02-01 09:00:00',3,3,4,'BOGO day'),(4,'2020-02-01 10:00:00',3,4,3,'Taco Day.');
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -71,7 +71,7 @@ CREATE TABLE `sports` (
 
 LOCK TABLES `sports` WRITE;
 /*!40000 ALTER TABLE `sports` DISABLE KEYS */;
-INSERT INTO `sports` VALUES (1,'Calvin Ball'),(3,'Competitive Dance'),(2,'Hockey');
+INSERT INTO `sports` VALUES (1,'Calvinball'),(3,'Competitive Dance'),(2,'Hockey');
 /*!40000 ALTER TABLE `sports` ENABLE KEYS */;
 UNLOCK TABLES;
 

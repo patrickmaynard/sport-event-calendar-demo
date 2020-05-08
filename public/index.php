@@ -1,7 +1,5 @@
 <?php
 
-//I am just running a quick smoke test of the autoloader, yaml parsing and logging here.
-
 require(
     __DIR__.
     DIRECTORY_SEPARATOR .
@@ -10,10 +8,12 @@ require(
     'vendor/autoload.php'
 );
 
-use Application\Basics\Stub;
-use Application\Controller\EventListingController;
+use Application\Controller\ControllerFactory;
 
 //If we get more controllers, we can set up some actual routing.
-//For now, we can just use the controller we have.
-$defaultController = new EventListingController();
-echo $defaultController->eventsAction();
+//For now, we can just use the single controller we have.
+$controllerFactory = new ControllerFactory;
+$controller = $controllerFactory->getController('eventListing');
+$response = $controller->eventsAction($_GET);
+http_response_code($response['status']);
+echo $response['text'];

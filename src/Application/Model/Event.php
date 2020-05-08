@@ -10,25 +10,20 @@ class Event
     /** @var \DateTime $dateTime */
     private $dateTime;
 
-    /** @var string $sport */
-    private $sport;
+    /** @var string $sportName */
+    private $sportName;
 
-    /** @var string $home */
-    private $home;
+    /** @var string $homeName */
+    private $homeName;
 
-    /** @var string $guest */
-    private $guest;
+    /** @var string $guestName */
+    private $guestName;
 
     /** @var string $notes */
     private $notes;
 
-    /**
-     * @return int
-     */
-    public function getSportId()
-    {
-        return $this->sportId;
-    }
+    /** @var int $sportId */
+    private $sportId;
 
     /**
      * @return int
@@ -71,18 +66,18 @@ class Event
     /**
      * @return string
      */
-    public function getSport()
+    public function getsportName()
     {
-        return $this->sport;
+        return $this->sportName;
     }
 
     /**
-     * @param string $sport
+     * @param string $sportName
      * @return Event
      */
-    public function setSport($sport)
+    public function setsportName($sportName)
     {
-        $this->sport = $sport;
+        $this->sportName = $sportName;
 
         return $this;
     }
@@ -90,18 +85,18 @@ class Event
     /**
      * @return string
      */
-    public function getHome()
+    public function gethomeName()
     {
-        return $this->home;
+        return $this->homeName;
     }
 
     /**
-     * @param string $home
+     * @param string $homeName
      * @return Event
      */
-    public function setHome($home)
+    public function sethomeName($homeName)
     {
-        $this->home = $home;
+        $this->homeName = $homeName;
 
         return $this;
     }
@@ -109,18 +104,18 @@ class Event
     /**
      * @return string
      */
-    public function getGuest()
+    public function getguestName()
     {
-        return $this->guest;
+        return $this->guestName;
     }
 
     /**
-     * @param string $guest
+     * @param string $guestName
      * @return Event
      */
-    public function setGuest($guest)
+    public function setguestName($guestName)
     {
-        $this->guest = $guest;
+        $this->guestName = $guestName;
 
         return $this;
     }
@@ -155,8 +150,13 @@ class Event
         return $this;
     }
 
-    /** @var int $sportId */
-    private $sportId;
+    /**
+     * @return int
+     */
+    public function getSportId()
+    {
+        return $this->sportId;
+    }
 
     /**
      * @return string
