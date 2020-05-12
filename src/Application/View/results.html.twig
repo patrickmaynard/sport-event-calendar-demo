@@ -3,23 +3,28 @@
 {% block body %}
 
     <h2>{{ templateSettings.title }}</h2>
-    <table>
-        <tr>
-            <th>Date and time</th>
-            <th>Sport</th>
-            <th>Home</th>
-            <th>Guest</th>
-            <th>Notes</th>
-        </tr>
-    {% for event in templateSettings.events %}
-        <tr class="{{ cycle(['odd', 'even'], loop.index0) }}">
-                <td><span class="mobile-title">Date and time: </span>{{ event.dateTime|date("D, d.m.Y, G:i") }}</td>
-            <td><span class="mobile-title">Sport: </span><a href="/?sport={{ event.sportId }}">{{ event.sportName }}</a></td>
-                <td><span class="mobile-title">Home: </span>{{ event.homeName }}</strong></td>
-                <td><span class="mobile-title">Guest: </span>{{ event.guestName }}</td>
-                <td><span class="mobile-title">Notes: </span>{{ event.notes }}</td>
-        </tr>
-    {% endfor %}
+    <table id="events">
+        <thead>
+            <tr>
+                <th>Date and time</th>
+                <th>Sport</th>
+                <th>Home</th>
+                <th>Guest</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in templateSettings.events %}
+                {## tr class="{{ cycle(['odd', 'even'], loop.index0) }}" <!-- clashes with datatables --> #}
+                <tr>
+                        <td><span class="mobile-title">Date and time: </span>{{ event.dateTime|date("D, d.m.Y, G:i") }}</td>
+                        <td><span class="mobile-title">Sport: </span><a href="/?sport={{ event.sportId }}">{{ event.sportName }}</a></td>
+                        <td><span class="mobile-title">Home: </span>{{ event.homeName }}</strong></td>
+                        <td><span class="mobile-title">Guest: </span>{{ event.guestName }}</td>
+                        <td><span class="mobile-title">Notes: </span>{{ event.notes }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
     </table>
 {% endblock %}
 

@@ -14,6 +14,6 @@ use Application\Controller\ControllerFactory;
 //For now, we can just use the single controller we have.
 $controllerFactory = new ControllerFactory;
 $controller = $controllerFactory->getController('eventListing');
-$response = $controller->eventsAction($_GET);
+$response = $controller->execute($_GET);
 http_response_code($response['status']);
 echo $response['text'];

@@ -48,7 +48,7 @@ class EventListingController implements ControllerInterface
         $this->twig = $twig;
     }
 
-    public function eventsAction(array $get)
+    public function execute(array $get) : array
     {
         $this->templateSettings['title'] = 'All events';
         if (isset($get['sport'])) {

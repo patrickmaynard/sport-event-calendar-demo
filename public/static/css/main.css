@@ -52,9 +52,6 @@ footer {
 table {
     width:100%;
 }
-tr.odd {
-    background: #cccccc;
-}
 td {
     padding:5px 5px 0px 5px;
 }
@@ -71,13 +68,13 @@ span.mobile-title {
     }
     header li.menu-toggle {
         display:block;
-        text-decoration: underline;
+        cursor: pointer;
     }
     header ul {
         height:40px;
         overflow:hidden;
     }
-    header ul:hover {
+    header ul.show {
         height:auto;
     }
     header li {
@@ -94,7 +91,7 @@ span.mobile-title {
         padding: 10px;
     }
     table {
-        width: 100%;
+        width: 90%!important;
     }
     th {
         display:none;
@@ -102,14 +99,10 @@ span.mobile-title {
     td {
         display:block;
         width:100%;
-        background:#ffffff;
     }
     tr {
         display:block;
-        border-bottom: 1px solid #cccccc;
-    }
-    tr:first-child, tr:last-child {
-        border-bottom: none;
+        border-bottom: 20px solid #ffffff;
     }
     span.mobile-title {
         display: inline;

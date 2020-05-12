@@ -11,7 +11,7 @@ use Application\Model\SportRepository;
  * Class ControllerFactory
  *
  * TBH, we don't really need a factory yet.
- * But setting things up this way makes things flexible for future use.
+ * But setting stuff up this way makes things flexible for future use.
  * It also makes our controller testable, since we're injecting dependencies here.
  *
  * @package Application\Controller

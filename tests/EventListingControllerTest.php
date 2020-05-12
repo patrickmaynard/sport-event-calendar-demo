@@ -53,7 +53,7 @@ class EventListingControllerTest extends TestCase
             $twig
         );
 
-        $response = $controller->eventsAction(['sport' => 1]);
+        $response = $controller->execute(['sport' => 1]);
 
         self::assertIsArray($response);
         self::assertEquals($response['status'], 200);
