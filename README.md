@@ -8,3 +8,7 @@
 * To run the server, type `php -S localhost:8000`
 * Visit `http://localhost:8000/` to see output
 
+### Extra tip
+
+Try viewing the page with JavaScript disabled to see what filtering is server-side and what's not.
+

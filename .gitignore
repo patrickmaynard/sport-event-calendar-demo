@@ -2,3 +2,6 @@ vendor/
 .idea/
 logs/
 node_modules/
+public/static/css/jquery.datatables.css
+public/static/images
+public/static/js/node_modules
