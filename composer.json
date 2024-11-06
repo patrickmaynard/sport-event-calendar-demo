@@ -3,7 +3,7 @@
         "symfony/yaml": "^3.0",
         "monolog/monolog": "^1.25",
         "phpunit/phpunit": "^7.5",
-        "twig/twig": "^2.0"
+        "twig/twig": "^3.11"
     },
     "autoload": {
         "psr-4": { "": "src/" }
